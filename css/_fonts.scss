@@ -1,0 +1,27 @@
+// font size for desktop
+
+$heading--900: 45px;
+$heading--700: 35px;
+$heading--500: 26px;
+
+$regular--text: 16px;
+$medium--text: 14px;
+$small--text: 12px;
+
+// font size for mobile
+
+
+    
+
+
+@media screen and (min-width: 750px) {
+    $heading--900: 35px;
+    $heading--700: 25px;
+    $heading--500: 22px;
+    
+    $regular--text: 14px;
+    $medium--text: 12px;
+    $small--text: 10px;
+    
+    
+  }

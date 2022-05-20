@@ -1,0 +1,79 @@
+@import "../mixins/mixin";
+@import "../colors";
+@import "../fonts";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap");
+
+header {
+  @media screen and (max-width: 750px) {
+    background-image: url("../../images/mobile/image-header.jpg");
+    height: 60vh;
+  }
+
+  background-image: url("../../images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  height: 100vh;
+  color: $White;
+
+  .navbar {
+    @include flex(space-between, row);
+    padding: 1rem;
+    font-family: Barlow;
+
+    .navbar--links {
+      .link-logo {
+        display: none;
+
+        @media screen and (max-width: 750px) {
+          display: flex;
+        }
+      }
+
+      ul {
+        @media screen and (max-width: 750px) {
+          display: none;
+        }
+
+        @include flex(center, row);
+
+        li {
+          margin-inline: 0.5em;
+          cursor: pointer;
+          padding: 0.5em 1em;
+          transition: 0.3s;
+          border-radius: 1em;
+          text-transform: uppercase;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.192);
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .header--text {
+    @include flex(center, column);
+
+    h1 {
+      @media screen and (max-width: 750px) {
+        margin: 2rem;
+      }
+
+      text-transform: uppercase;
+      margin: 5rem;
+      text-align: center;
+      letter-spacing: 0.3em;
+      font-size: $heading--900;
+      font-weight: 900;
+    }
+
+    .arrow {
+      img {
+        width: 70%;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../mixins/mixin";
+@import "../colors";
+
+footer {
+  @include flex(center, column);
+
+  background-color: $Dark-moderate-cyan--footer;
+  padding: 3rem 0;
+
+  .footer--nav {
+    width: 20%;
+    font-family: Barlow;
+    color: $Very-dark-desaturated-blue;
+
+    ul {
+      @include flex(space-around, row);
+      margin-block: 2rem;
+
+      li {
+        cursor: pointer;
+transition: .3s;
+
+        @media screen and (max-width: 750px) {
+          margin-inline: 1.5rem;
+        }
+
+        &:hover {
+          color: $White;
+        }
+      }
+    }
+  }
+
+  .social-media-icon {
+    @include flex(space-around, row);
+
+    i {
+      margin: 0.5rem;
+      font-size: 1em;
+      transition: 0.3s;
+      cursor: pointer;
+      color: $Very-dark-desaturated-blue;
+
+      &:hover {
+        scale: 1.5;
+        color: blue;
+      }
+    }
+  }
+}

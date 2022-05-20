@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap");
+header {
+  background-image: url("../../images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: hsl(0deg, 0%, 100%);
+}
+@media screen and (max-width: 750px) {
+  header {
+    background-image: url("../../images/mobile/image-header.jpg");
+    height: 60vh;
+  }
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1rem;
+  font-family: Barlow;
+}
+header .navbar .navbar--links .link-logo {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  header .navbar .navbar--links .link-logo {
+    display: flex;
+  }
+}
+header .navbar .navbar--links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+@media screen and (max-width: 750px) {
+  header .navbar .navbar--links ul {
+    display: none;
+  }
+}
+header .navbar .navbar--links ul li {
+  margin-inline: 0.5em;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  transition: 0.3s;
+  border-radius: 1em;
+  text-transform: uppercase;
+}
+header .navbar .navbar--links ul li:hover {
+  background-color: rgba(255, 255, 255, 0.192);
+  font-weight: 600;
+}
+header .header--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header .header--text h1 {
+  text-transform: uppercase;
+  margin: 5rem;
+  text-align: center;
+  letter-spacing: 0.3em;
+  font-size: 45px;
+  font-weight: 900;
+}
+@media screen and (max-width: 750px) {
+  header .header--text h1 {
+    margin: 2rem;
+  }
+}
+header .header--text .arrow img {
+  width: 70%;
+}/*# sourceMappingURL=header.css.map */

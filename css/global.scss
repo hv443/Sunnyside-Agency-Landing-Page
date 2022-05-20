@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap');
+@import "./fonts";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+body{
+    font-family: Fraunces,sans-serif;
+    font-size: 18px;
+}
+
+
+
+// font size for desktop
+
+$heading--900: 45px;
+$heading--700: 35px;
+$heading--500: 26px;
+
+$regular--text: 16px;
+$medium--text: 14px;
+$small--text: 12px;
+
+// font size for mobile
+
+
+@media screen and (min-width:786px) {
+    
+
+    
+$heading--900: 35px;
+$heading--700: 25px;
+$heading--500: 22px;
+
+$regular--text: 14px;
+$medium--text: 12px;
+$small--text: 10px;
+
+}

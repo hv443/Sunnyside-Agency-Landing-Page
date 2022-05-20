@@ -1,0 +1,230 @@
+@import "../colors";
+@import "../mixins/mixin";
+@import "../fonts";
+
+.main--container {
+  width: 100%;
+
+  .middle--grid {
+    @media screen and (max-width: 750px) {
+      grid-template-areas:
+        "a "
+        "b"
+        "c "
+        "d"
+        "e"
+        "f";
+    }
+
+    display: grid;
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
+
+    grid-auto-rows: 1fr;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    h2 {
+      font-size: $heading--700;
+      font-weight: 900;
+      color: $Very-dark-desaturated-blue;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+      font-size: $heading--500;
+      color: $Dark-desaturated-cyan--graphic-design-text;
+      font-weight: 900;
+    }
+
+    p {
+      font-size: $regular--text;
+      color: $Very-dark-grayish-blue;
+      font-family: Barlow;
+      font-weight: 400;
+    }
+  }
+}
+
+.grid--transform {
+  grid-area: a;
+
+  @media screen and (max-width: 750px) {
+    grid-area: b;
+  }
+}
+.grid--img-egg {
+  grid-area: b;
+  @media screen and (max-width: 750px) {
+    grid-area: a;
+  }
+}
+.grid--img-glass {
+  grid-area: c;
+}
+.grid--stand-out {
+  grid-area: d;
+}
+.grid--graphic-design {
+  grid-area: e;
+  background-image: url(../../images/desktop/image-graphic-design.jpg);
+  background-size: cover;
+  background-position: center;
+
+  p {
+    color: $Dark-desaturated-cyan--graphic-design-text;
+  }
+}
+.grid--photography {
+  grid-area: f;
+  background-image: url(../../images/desktop/image-photography.jpg);
+  background-size: cover;
+  background-position: center;
+
+  h3 {
+    color: $Dark-blue--photography-text;
+  }
+
+  p {
+    color: $Dark-blue--photography-text;
+  }
+}
+
+.grid--text {
+  @include flex(center, column);
+  align-items: flex-start;
+
+  h2,
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: $medium--text;
+    position: relative;
+    transition: 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 110%;
+      background-color: rgba(255, 0, 0, 0.193);
+      z-index: -1;
+      left: -5%;
+      bottom: 0;
+      border-radius: 0.4rem;
+      transition: 0.3s;
+    }
+    &:hover::after {
+      background-color: $Yellow;
+    }
+  }
+}
+
+.grid--img-text {
+  @include flex(flex-end, column);
+  text-align: center;
+}
+
+.info {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.info--fruit {
+  margin-bottom: 3rem;
+  max-width: 60%;
+}
+
+.testimonial--container {
+  @include flex(center, column);
+
+  text-align: center;
+  background-color: $White;
+  padding: 8rem 2rem;
+
+  @media screen and (max-width:750px) {
+   padding: 3rem 1rem;
+}
+
+  .testimonial--heading {
+    margin-bottom: 5rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: $Dark-grayish-blue;
+
+    @media screen and (max-width:750px) {
+        margin-bottom: 3rem;
+    }
+  }
+
+  .testimonial--clients {
+    @include flex(space-around, row);
+    align-items: stretch;
+
+    @media screen and (max-width:750px) {
+        @include flex(space-around, column);
+    }
+
+    .client {
+      @include flex(space-between, column);
+
+      max-width: 25%;
+      font-family: Barlow;
+
+      @media screen and (max-width:750px) {
+       max-width: 80%;
+       margin-block: 1rem;
+    }
+
+      .client--para {
+        margin-bottom: 2rem;
+        color: $Very-dark-grayish-blue;
+      }
+
+      img {
+        border-radius: 50%;
+        max-width: 50%;
+        margin-bottom: 2rem;
+      }
+
+      .client--name {
+        .name {
+          font-weight: 900;
+          font-family: Fraunces;
+          color: $Very-dark-desaturated-blue;
+        }
+        .profession {
+          font-size: 14px;
+          margin-top: 0.5rem;
+          color: $Grayish-blue;
+        }
+      }
+    }
+  }
+}
+
+.stock-img--container {
+  width: 100%;
+
+  .stock-img {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width:750px) {
+        grid-template-columns: auto auto;
+
+    }
+  }
+}
