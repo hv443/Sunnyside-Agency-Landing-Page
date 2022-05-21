@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -17,4 +18,32 @@ a {
 body {
   font-family: Fraunces, sans-serif;
   font-size: 18px;
+}
+
+.display {
+  display: none;
+}
+
+@-webkit-keyframes arrowMove {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=global.css.map */

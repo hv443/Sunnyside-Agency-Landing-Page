@@ -21,10 +21,11 @@ footer .footer--nav ul {
 footer .footer--nav ul li {
   cursor: pointer;
   transition: 0.3s;
+  margin-inline: 1.5rem;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   footer .footer--nav ul li {
-    margin-inline: 1.5rem;
+    margin-inline: 1rem;
   }
 }
 footer .footer--nav ul li:hover {

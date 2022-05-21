@@ -6,8 +6,9 @@
   grid-template-areas: "a b" "c d" "e f";
   grid-auto-rows: 1fr;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .main--container .middle--grid {
+    text-align: center;
     grid-template-areas: "a " "b" "c " "d" "e" "f";
   }
 }
@@ -30,13 +31,13 @@
   font-size: 16px;
   color: hsl(213deg, 9%, 39%);
   font-family: Barlow;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .grid--transform {
   grid-area: a;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .grid--transform {
     grid-area: b;
   }
@@ -45,7 +46,7 @@
 .grid--img-egg {
   grid-area: b;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .grid--img-egg {
     grid-area: a;
   }
@@ -128,10 +129,21 @@
   margin: 0 auto;
   width: 60%;
 }
+@media screen and (max-width: 650px) {
+  .info {
+    width: 80%;
+  }
+}
 
 .info--fruit {
   margin-bottom: 3rem;
-  max-width: 60%;
+  width: 70%;
+}
+@media screen and (max-width: 650px) {
+  .info--fruit {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
 }
 
 .testimonial--container {
@@ -143,7 +155,7 @@
   background-color: hsl(0deg, 0%, 100%);
   padding: 8rem 2rem;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .testimonial--container {
     padding: 3rem 1rem;
   }
@@ -154,9 +166,11 @@
   text-transform: uppercase;
   color: hsl(232deg, 10%, 55%);
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .testimonial--container .testimonial--heading {
     margin-bottom: 3rem;
+    font-size: 16px;
+    letter-spacing: 0.3em;
   }
 }
 .testimonial--container .testimonial--clients {
@@ -166,7 +180,7 @@
   flex-direction: row;
   align-items: stretch;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .testimonial--container .testimonial--clients {
     display: flex;
     align-items: center;
@@ -182,7 +196,7 @@
   max-width: 25%;
   font-family: Barlow;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .testimonial--container .testimonial--clients .client {
     max-width: 80%;
     margin-block: 1rem;
@@ -218,7 +232,7 @@
 .stock-img--container .stock-img img {
   width: 100%;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .stock-img--container .stock-img {
     grid-template-columns: auto auto;
   }

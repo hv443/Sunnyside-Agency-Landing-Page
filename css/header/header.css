@@ -4,13 +4,11 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
   color: hsl(0deg, 0%, 100%);
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   header {
     background-image: url("../../images/mobile/image-header.jpg");
-    height: 60vh;
   }
 }
 header .navbar {
@@ -18,39 +16,89 @@ header .navbar {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 1rem;
+  padding: 2rem 1rem;
   font-family: Barlow;
+  position: relative;
 }
 header .navbar .navbar--links .link-logo {
   display: none;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   header .navbar .navbar--links .link-logo {
     display: flex;
+    cursor: pointer;
   }
 }
-header .navbar .navbar--links ul {
+header .navbar .navbar--links .mobile-menu {
+  display: none;
+  transition: 0.5s;
+}
+@media screen and (max-width: 650px) {
+  header .navbar .navbar--links .mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    padding: 1rem 0;
+    left: 5%;
+    top: 100%;
+    width: 90%;
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(210deg, 4%, 67%);
+    font-weight: 600;
+    line-height: 3rem;
+  }
+  header .navbar .navbar--links .mobile-menu li {
+    cursor: pointer;
+    padding: 0 1em;
+    transition: 0.3s;
+    border-radius: 1.5em;
+    text-transform: uppercase;
+  }
+  header .navbar .navbar--links .mobile-menu li:hover {
+    background-color: hsl(51deg, 100%, 49%);
+    color: black;
+  }
+  header .navbar .navbar--links .mobile-menu::after {
+    content: " ";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    border-color: transparent;
+    border-top: 0;
+    border-left: 20px solid;
+    border-color: transparent;
+    border-bottom: 20px solid hsl(0deg, 0%, 100%);
+    border-right: 0px;
+  }
+}
+header .navbar .navbar--links .desktop-nav {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
-@media screen and (max-width: 750px) {
-  header .navbar .navbar--links ul {
+@media screen and (max-width: 650px) {
+  header .navbar .navbar--links .desktop-nav {
     display: none;
   }
 }
-header .navbar .navbar--links ul li {
+header .navbar .navbar--links .desktop-nav li {
   margin-inline: 0.5em;
   cursor: pointer;
   padding: 0.5em 1em;
   transition: 0.3s;
-  border-radius: 1em;
+  border-radius: 1.5em;
   text-transform: uppercase;
 }
-header .navbar .navbar--links ul li:hover {
+header .navbar .navbar--links .desktop-nav li:hover {
   background-color: rgba(255, 255, 255, 0.192);
   font-weight: 600;
+}
+header .navbar .navbar--links .desktop-nav li:focus {
+  background-color: hsl(51deg, 100%, 49%);
+  color: black;
 }
 header .header--text {
   display: flex;
@@ -60,17 +108,15 @@ header .header--text {
 }
 header .header--text h1 {
   text-transform: uppercase;
-  margin: 5rem;
+  margin: 4rem;
   text-align: center;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   font-size: 45px;
   font-weight: 900;
 }
-@media screen and (max-width: 750px) {
-  header .header--text h1 {
-    margin: 2rem;
-  }
-}
 header .header--text .arrow img {
-  width: 70%;
+  width: 100%;
+  margin-bottom: 15rem;
+  -webkit-animation: arrowMove 2s infinite;
+          animation: arrowMove 2s infinite;
 }/*# sourceMappingURL=header.css.map */

@@ -4,50 +4,104 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap");
 
 header {
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 650px) {
     background-image: url("../../images/mobile/image-header.jpg");
-    height: 60vh;
   }
 
   background-image: url("../../images/desktop/image-header.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size:cover;
-  height: 100vh;
+  background-size: cover;
   color: $White;
 
   .navbar {
     @include flex(space-between, row);
-    padding: 1rem;
+    padding: 2rem 1rem;
     font-family: Barlow;
+    position: relative;
 
     .navbar--links {
       .link-logo {
         display: none;
 
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 650px) {
           display: flex;
+          cursor: pointer;
         }
       }
 
-      ul {
-        @media screen and (max-width: 750px) {
+      .mobile-menu {
+        display: none;
+        transition: .5s;
+
+        @media screen and (max-width: 650px) {
+          @include flex(center, column);
+
+          position: absolute;
+          padding: 1rem 0;
+          left: 5%;
+          top: 100%;
+          width: 90%;
+
+          background-color: $White;
+          color: $Grayish-blue;
+          font-weight: 600;
+          line-height: 3rem;
+
+          li {
+            cursor: pointer;
+            padding: 0 1em;
+            transition: 0.3s;
+            border-radius: 1.5em;
+            text-transform: uppercase;
+
+            &:hover {
+              background-color: $Yellow;
+              color: black;
+            }
+
+          }
+
+          &::after {
+            content: " ";
+            position: absolute;
+
+            top: -20px;
+            right: 0;
+
+            border-color: transparent;
+            border-top: 0;
+            border-left: 20px solid;
+            border-color: transparent;
+            border-bottom: 20px solid $White;
+            border-right: 0px;
+          }
+        }
+      }
+
+      .desktop-nav {
+        @include flex(center, row);
+
+        @media screen and (max-width: 650px) {
           display: none;
         }
-
-        @include flex(center, row);
 
         li {
           margin-inline: 0.5em;
           cursor: pointer;
           padding: 0.5em 1em;
           transition: 0.3s;
-          border-radius: 1em;
+          border-radius: 1.5em;
           text-transform: uppercase;
 
           &:hover {
             background-color: rgba(255, 255, 255, 0.192);
             font-weight: 600;
+          }
+          
+          &:focus{
+            background-color: $Yellow;
+            color: black;
           }
         }
       }
@@ -58,22 +112,25 @@ header {
     @include flex(center, column);
 
     h1 {
-      @media screen and (max-width: 750px) {
-        margin: 2rem;
-      }
-
       text-transform: uppercase;
-      margin: 5rem;
+      margin: 4rem;
       text-align: center;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.2em;
       font-size: $heading--900;
       font-weight: 900;
     }
 
     .arrow {
       img {
-        width: 70%;
+        width: 100%;
+        margin-bottom: 15rem;
+
+        animation: arrowMove 2s infinite;
       }
     }
   }
 }
+
+
+
+

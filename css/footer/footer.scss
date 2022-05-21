@@ -18,10 +18,12 @@ footer {
 
       li {
         cursor: pointer;
-transition: .3s;
+        transition: 0.3s;
+        margin-inline: 1.5rem;
 
-        @media screen and (max-width: 750px) {
-          margin-inline: 1.5rem;
+
+        @media screen and (max-width: 650px) {
+          margin-inline: 1rem;
         }
 
         &:hover {
