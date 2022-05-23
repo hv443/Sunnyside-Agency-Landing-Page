@@ -39,6 +39,8 @@ header .navbar .navbar--links .mobile-menu {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    -webkit-animation: menu 0.5s 1;
+            animation: menu 0.5s 1;
     position: absolute;
     padding: 1rem 0;
     left: 5%;
@@ -48,17 +50,19 @@ header .navbar .navbar--links .mobile-menu {
     color: hsl(210deg, 4%, 67%);
     font-weight: 600;
     line-height: 3rem;
+    z-index: 1;
   }
   header .navbar .navbar--links .mobile-menu li {
     cursor: pointer;
-    padding: 0 1em;
+    padding: 0.1em 1em;
     transition: 0.3s;
     border-radius: 1.5em;
     text-transform: uppercase;
+    margin: 0.5rem 0;
   }
   header .navbar .navbar--links .mobile-menu li:hover {
-    background-color: hsl(51deg, 100%, 49%);
-    color: black;
+    background-color: rgba(255, 255, 0, 0.583);
+    color: rgba(0, 0, 0, 0.605);
   }
   header .navbar .navbar--links .mobile-menu::after {
     content: " ";
@@ -94,11 +98,6 @@ header .navbar .navbar--links .desktop-nav li {
 }
 header .navbar .navbar--links .desktop-nav li:hover {
   background-color: rgba(255, 255, 255, 0.192);
-  font-weight: 600;
-}
-header .navbar .navbar--links .desktop-nav li:focus {
-  background-color: hsl(51deg, 100%, 49%);
-  color: black;
 }
 header .header--text {
   display: flex;

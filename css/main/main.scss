@@ -7,7 +7,6 @@
 
   .middle--grid {
     @media screen and (max-width: 650px) {
-
       text-align: center;
       grid-template-areas:
         "a "
@@ -162,9 +161,9 @@
   background-color: $White;
   padding: 8rem 2rem;
 
-  @media screen and (max-width:650px) {
-   padding: 3rem 1rem;
-}
+  @media screen and (max-width: 650px) {
+    padding: 3rem 1rem;
+  }
 
   .testimonial--heading {
     margin-bottom: 5rem;
@@ -172,10 +171,10 @@
     text-transform: uppercase;
     color: $Dark-grayish-blue;
 
-    @media screen and (max-width:650px) {
-        margin-bottom: 3rem;
-        font-size: $regular--text;
-        letter-spacing: .3em;
+    @media screen and (max-width: 650px) {
+      margin-bottom: 3rem;
+      font-size: $regular--text;
+      letter-spacing: 0.3em;
     }
   }
 
@@ -183,8 +182,8 @@
     @include flex(space-around, row);
     align-items: stretch;
 
-    @media screen and (max-width:650px) {
-        @include flex(space-around, column);
+    @media screen and (max-width: 650px) {
+      @include flex(space-around, column);
     }
 
     .client {
@@ -193,10 +192,10 @@
       max-width: 25%;
       font-family: Barlow;
 
-      @media screen and (max-width:650px) {
-       max-width: 80%;
-       margin-block: 1rem;
-    }
+      @media screen and (max-width: 650px) {
+        max-width: 80%;
+        margin-block: 1rem;
+      }
 
       .client--para {
         margin-bottom: 2rem;
@@ -235,9 +234,8 @@
       width: 100%;
     }
 
-    @media screen and (max-width:650px) {
-        grid-template-columns: auto auto;
-
+    @media screen and (max-width: 650px) {
+      grid-template-columns: auto auto;
     }
   }
 }

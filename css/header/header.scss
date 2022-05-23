@@ -32,10 +32,12 @@ header {
 
       .mobile-menu {
         display: none;
-        transition: .5s;
+        transition: 0.5s;
 
         @media screen and (max-width: 650px) {
           @include flex(center, column);
+
+          animation: menu 0.5s 1;
 
           position: absolute;
           padding: 1rem 0;
@@ -47,19 +49,20 @@ header {
           color: $Grayish-blue;
           font-weight: 600;
           line-height: 3rem;
+          z-index: 1;
 
           li {
             cursor: pointer;
-            padding: 0 1em;
+            padding: 0.1em 1em;
             transition: 0.3s;
             border-radius: 1.5em;
             text-transform: uppercase;
+            margin: 0.5rem 0;
 
             &:hover {
-              background-color: $Yellow;
-              color: black;
+              background-color: rgba(255, 255, 0, 0.583);
+              color: rgba(0, 0, 0, 0.605);
             }
-
           }
 
           &::after {
@@ -96,12 +99,6 @@ header {
 
           &:hover {
             background-color: rgba(255, 255, 255, 0.192);
-            font-weight: 600;
-          }
-          
-          &:focus{
-            background-color: $Yellow;
-            color: black;
           }
         }
       }
@@ -130,7 +127,3 @@ header {
     }
   }
 }
-
-
-
-

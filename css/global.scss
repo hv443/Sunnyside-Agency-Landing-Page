@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap");
 @import "./fonts";
+@import "./colors";
 
 * {
   margin: 0;
@@ -26,6 +27,18 @@ body {
   display: none;
 }
 
+.active {
+  background-color: $White;
+  color: black;
+  font-family: Fraunces;
+  font-weight: 700;
+  font-size: 16px;
+}
+.m-active {
+  background-color: $Yellow;
+  color: black;
+}
+
 @keyframes arrowMove {
   0% {
     transform: translateY(0px);
@@ -37,5 +50,15 @@ body {
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes menu {
+  0% {
+    transform: scale(0);
+    transform-origin: right top;
+  }
+  100% {
+    transform: scale(1);
   }
 }
