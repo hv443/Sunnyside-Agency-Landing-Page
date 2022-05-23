@@ -23,6 +23,5 @@ mobileNav.forEach((element) => {
       e.classList.remove("m-active");
     });
     this.classList.add("m-active");
-    console.log("ho");
   });
 });
